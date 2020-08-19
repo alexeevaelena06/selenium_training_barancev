@@ -17,14 +17,14 @@ public class MyFirstTest {
     @Before
     public  void start() {
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 20);
     }
 
     @Test
     public void myFirstTest(){
         driver.get("http://www.google.com/");
         driver.findElement(By.name("q")).sendKeys("webdriver");
-        driver.findElement(By.name("btnG")).click();
+        driver.findElement(By.name("btnK")).click();
         wait.until(titleIs("webdriver - Поиск в Google"));
 
     }
